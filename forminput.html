@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pancong Lumer</title>
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="active.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="img/headerimage.png">
+  </head>
+  <body id="order">
+    <!-- heading -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #74512D;">
+      <div class="container">
+        <a class="header-image-link" href="index.html">
+          <img src="img/headerimage.png" alt="header image" class="header-image" style="width: 4.5rem; height: auto; cursor: default;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" id="nav-home" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-about" href="portal.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" id="nav-order" href="forminput.html">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-tabeldata" href="tabeldata.php">Order Data</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- form pembelian -->
+     <section style="background-color: #bfa58c;">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col text-center mt-5">
+                    <h1>Form Pemesanan</h1>
+                </div>
+            </div>
+        </div>
+        <form action="process_order.php" method="POST">
+          <!-- text box -->
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingName" name="nama" placeholder="Rudi Gunawan" required>
+                  <label for="floatingName">Nama</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" id="floatingNumber" name="nomor_telepon" placeholder="0811111" required>
+                  <label for="floatingNumber">Nomer Telepon</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- radio button -->
+          <div class="d-flex justify-content-center" >
+            <p class="me-3">Tingkat Kematangan:</p>
+            <div class="form-check me-3" >
+              <input class="form-check-input" type="radio" name="tingkat_kematangan" id="flexRadioDefault1" value="Matang" required>
+              <label class="form-check-label" for="flexRadioDefault1">
+                Matang
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="tingkat_kematangan" id="flexRadioDefault2" value="Setengah Matang" required>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Setengah Matang
+              </label>
+            </div>
+          </div>
+<!-- check box -->
+<div class="container">
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-6">
+        <p>Topping:</p>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Nuttela" id="flexCheckDefault1">
+              <label class="form-check-label" for="flexCheckDefault1">
+                Nuttela
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Matcha" id="flexCheckDefault2">
+              <label class="form-check-label" for="flexCheckDefault2">
+                Matcha
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Ovomaltine" id="flexCheckDefault3">
+              <label class="form-check-label" for="flexCheckDefault3">
+                Ovomaltine
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Meses" id="flexCheckDefault4">
+              <label class="form-check-label" for="flexCheckDefault4">
+                Meses
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Susu Kental Manis" id="flexCheckDefault5">
+              <label class="form-check-label" for="flexCheckDefault5">
+                Susu Kental Manis
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Keju" id="flexCheckDefault6">
+              <label class="form-check-label" for="flexCheckDefault6">
+                Keju
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Oreo" id="flexCheckDefault7">
+              <label class="form-check-label" for="flexCheckDefault7">
+                Oreo
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Stroberi" id="flexCheckDefault8">
+              <label class="form-check-label" for="flexCheckDefault8">
+                Stroberi
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="topping[]" value="Red velvet" id="flexCheckDefault9">
+              <label class="form-check-label" for="flexCheckDefault9">
+                Red velvet
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+          <!-- select -->
+          <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-3">
+                    <select class="form-select" aria-label="Default select example" name="jenis_adonan" required>
+                        <option value="">Jenis Adonan</option>
+                        <option value="Original">Original</option>
+                        <option value="Pandan">Pandan</option>
+                        <option value="Coklat">Coklat</option>
+                      </select>
+                </div>
+            </div>
+          </div>
+          <!-- catatan -->
+           <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Tinggalkan catatan disini" id="floatingTextarea2" name="catatan" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Catatan</label>
+                      </div>
+                </div>
+            </div>
+           </div>
+           <!-- button -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn" style="background-color: #d0904f;">Pesan</button>
+                    </div>
+                </div>
+            </div>
+     </section>
+
+     <!-- Footer -->
+     <footer style="background-color: #bfa58c;" class="text-white text-center pb-2 pt-5">
+      <p>Created by <a href="https://instagram.com/zyaadp?igshid=OGQ5ZDc2ODk2ZA==" class="text-white fw-bold">Fairuz Ziyaad Purnomo</a></p>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

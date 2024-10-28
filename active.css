@@ -1,0 +1,17 @@
+.nav-link.active {
+  font-weight: bold; /* Menjadikan teks bold untuk link aktif */
+  }
+  
+.tombol {
+  color: black;
+}
+
+.tombol:visited {
+  color: black;
+}
+
+.header-image {
+  width: 4.5rem;
+  height: auto;
+  cursor: default;
+}
